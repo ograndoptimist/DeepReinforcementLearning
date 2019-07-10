@@ -17,16 +17,15 @@ TABLE = \
 class TicTacToe(object):
     def __init__(self):
         self.table_configuration = [' ' for _ in range(9)]
-        self.table_view = TABLE.format(self.table_configuration[0], self.table_configuration[1],
-                                       self.table_configuration[2], self.table_configuration[3],
-                                       self.table_configuration[4], self.table_configuration[5],
-                                       self.table_configuration[6], self.table_configuration[7],
-                                       self.table_configuration[8])
         self.player_one = 'X'
         self.player_two = 'O'
 
     def print_table(self):
-        print(self.table_view)
+        print(TABLE.format(self.table_configuration[0], self.table_configuration[1],
+                           self.table_configuration[2], self.table_configuration[3],
+                           self.table_configuration[4], self.table_configuration[5],
+                           self.table_configuration[6], self.table_configuration[7],
+                           self.table_configuration[8]))
 
     def check_end_game(self):
         for position in self.table_configuration:
